@@ -1,6 +1,5 @@
 const libs = {
-  portal: require('/lib/xp/portal'),
-  content: require('/lib/xp/content'),
+  portal: require('/lib/xp/portal')
 };
 
 const getDefaultScript = (measurementID, enableAnonymization) => {
