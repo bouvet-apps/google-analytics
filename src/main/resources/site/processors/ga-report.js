@@ -35,7 +35,7 @@ exports.responseProcessor = function (req, res) {
     return res;
   }
 
-  const site = libs.portal.getSite().config;
+  const site = libs.portal.getSite();
   const defaultDisable = app.name.replace(/\./g, "-") + "_disabled";
 
   if (site && site._path) {
@@ -69,5 +69,6 @@ exports.responseProcessor = function (req, res) {
 
     res.pageContributions.headEnd.push(snippet);
   }
+
   return res;
 };
