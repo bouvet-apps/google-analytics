@@ -45,7 +45,7 @@ function getContentType(content) {
 }
 
 // Would like a better way to get site config
-    // A bad alternative is executing it in a created context
+// A bad alternative is executing it in a created context
 function getAppSettings(site) {
     let siteConfig;
     if (!site.data || !site.data.siteConfig) {
@@ -94,7 +94,7 @@ function get(req) {
         service: 'gaSettings',
         type: "absolute",
     })
-    const scriptAssetUrl = portalLib.assetUrl({path: 'js/client.js'});
+    const scriptAssetUrl = portalLib.assetUrl({ path: 'js/client.js' });
     const cssUrl = portalLib.assetUrl({ path: 'css/widget.css' });
 
     const widgetId = "widget-com-enonic-app-gareport"; // app.name.replace(/\./g, "-");
