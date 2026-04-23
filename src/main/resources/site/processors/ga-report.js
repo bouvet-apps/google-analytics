@@ -27,8 +27,6 @@ const getConsentRequiredScript = (script, defaultDisable, measurementID) => {
   return snippet;
 };
 
-//TODO check if tracking is enabled or not
-
 exports.responseProcessor = function (req, res) {
   if (req.mode !== 'live') {
     return res;
