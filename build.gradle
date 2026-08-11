@@ -7,7 +7,6 @@ plugins {
 dependencies {
     implementation xplibs.api.core
     implementation xplibs.api.portal
-    implementation xplibs.api.jaxrs
     include xplibs.content
     include xplibs.portal
     include "com.google.api-client:google-api-client:2.9.0"
