@@ -1,6 +1,6 @@
 plugins {
     id 'com.enonic.xp.app'
-    id 'com.enonic.defaults' version '2.1.6'
+    id 'com.enonic.defaults' version '2.1.7'
     id 'maven-publish'
 }
 
@@ -9,10 +9,12 @@ dependencies {
     implementation xplibs.api.portal
     include xplibs.content
     include xplibs.portal
-    include "com.google.api-client:google-api-client:2.9.0"
-    include "com.google.auth:google-auth-library-oauth2-http:1.46.0"
-    include 'com.google.analytics:google-analytics-data:0.102.0'
-    include "com.enonic.lib:lib-thymeleaf:3.0.0"
+    include libs.google.api.client
+    include libs.google.auth.library.oauth2.http
+    include libs.google.analytics.data
+    include libs.lib.thymeleaf
+    include libs.enonic.lib.statics
+    include libs.enonic.lib.router
 }
 
 repositories {
