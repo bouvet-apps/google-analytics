@@ -6,6 +6,7 @@ Important: This integration requires a Google Analytics 4 account and does not s
 
 ## Contents
 
+- [Requirements](#requirements)
 - [Building and deploying](#building-and-deploying)
 - [Set up Google Analytics app for Enonic XP](#set-up-google-analytics-app-for-enonic-xp)
   - [Tracking](#tracking)
@@ -13,12 +14,21 @@ Important: This integration requires a Google Analytics 4 account and does not s
   - [Maps API key](#maps-api-key)
   - [Content Security Policy](#content-security-policy)
 
+## Requirements
+
+| | Version |
+| --- | --- |
+| Enonic XP | 8.0.3 or later |
+| Java (to build) | 25 |
+
+Version 5.0.0 and later require Enonic XP 8. If you run Enonic XP 7, stay on the 4.x releases of this app.
+
 ## Building and deploying
 
 Build this application from the command line:
 
 ```bash
-./gradlew clean build
+./gradlew build
 ```
 
 To deploy the app, set the `XP_HOME` environment variable and run:
@@ -98,7 +108,7 @@ Next, set up a service account and app configuration:
 ![Service account keys](docs/images/ServiceAccountKeys.png)
 
 7. Add a new key of type `json`. A file will be generated and downloaded. Store it securely.
-8. Create an app config file named `com.enonic.app.ga.cfg` in `{xp_home}/config` on the server.
+8. Create an app config file named `no.bouvet.app.ga.cfg` in `{xp_home}/config` on the server. The file name must match the application key.
 9. Add this line to that config file:
 
 ```properties
